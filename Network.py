@@ -13,6 +13,8 @@ class Network:
         self.weights = [np.random.randn(y, x)
                         for x, y in zip(layers[:-1], layers[1:])]
 
+    
+
     def sigmoid(self,z):
         return 1.0/(1.0+np.exp(-z))
 
@@ -26,8 +28,9 @@ class Network:
 
 listw = [1,2,1,1]
 network = Network([1,2,1,1])
-print(network.weights)
-print("------")
-print(np.random.randn(1, 2))
-print(np.random.randn(1, 1))
-print(np.random.randn(2, 1))
+parameters  = network.initialize_parameters([2,2,1])
+print(parameters)
+# print("------")
+# print(np.random.randn(1, 2))
+# print(np.random.randn(1, 1))
+# print(np.random.randn(2, 1))
